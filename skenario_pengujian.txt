@@ -1,0 +1,88 @@
+2. UserRepositoryTest.kt
+	a. Ketika berhasil signup:
+		- Memastikan UserPreference.updateUser terpanggil
+	b. Ketika gagal signup:
+		- Memastikan terjadi 'throw' AuthError
+	c. Ketika berhasil login:
+		- Memastikan UserPreference.updateUser terpanggil
+	d. Ketika gagal login:
+		- Memastikan terjadi 'throw' AuthError
+
+2. StoryRepositoryTest.kt
+	a. Ketika berhasil memuat story dari RemoteMediator:
+		- Memastikan differ.snapshot() tidak null
+		- Memastikan ukuran data pada snapshot() sesuai
+	b. Ketika berhasil memuat story dengan data lokasi:
+		- Memastikan list tidak kosong
+		- Memastikan id data pertama sesuai
+	c. Ketika gagal memuat story dengan data lokasi:
+		- Memastikan list kosong atau null
+
+4. WelcomeViewModelTest.kt
+	a. Ketika berhasil memuat UserModel dari DataStore:
+		- Memastikan kembalian tidak null
+	b. Ketika login berhasil:
+		- Memastikan UserRepository.login() terpanggil
+	c. Ketika login gagal:
+		- Memastikan UserRepository.login() terpanggil
+		- Memastikan errorMessage berisi "Error"
+
+5. SignupViewModelTest.kt
+	a. Ketika berhasil signup:
+		- Memastikan UserRepository.signup() terpanggil
+		- Memastikan isSuccess bernilai true
+	b. Ketika gagal signup:
+		- Memastikan UserRepository.signup() terpanggil
+		- Memastikan errorMessage berisi "Error"
+
+6. LoginViewModelTest.kt
+	a. Ketika berhasil memuat UserModel dari DataStore:
+		- Memastikan kembalian tidak null
+	b. Ketika login berhasil:
+		- Memastikan UserRepository.login() terpanggil
+	c. Ketika login gagal:
+		- Memastikan UserRepository.login() terpanggil
+		- Memastikan errorMessage berisi "Error"
+
+7. HomeViewModelTest.kt
+	a. Ketika berhasil memuat story:
+		- Memastikan differ.snapshot() tidak null
+		- Memastikan ukuran data pada snapshot() sesuai
+
+8. CreateViewModelTest.kt
+	a. Ketika berhasil memuat UserModel dari DataStore:
+		- Memastikan kembalian tidak null
+	b. Ketika upload gambar berhasil:
+		- Memastikan StoryRepository.postStory() terpanggil
+		- Memastikan isSuccess bernilai true
+	c. Ketika upload gambar gagal:
+		- Memastikan StoryRepository.postStory() terpanggil
+		- Memastikan errorMessage berisi "Error"
+
+9. MapsViewModelTest.kt
+	a. Ketika berhasil memuat UserModel dari DataStore:
+		- Memastikan kembalian tidak null
+	b. Ketika berhasil memuat story dengan data lokasi:
+		- Memastikan list tidak null
+		- Memastikan StoryRepository.getStoriesWithLocation() terpanggil
+		- Memastikan nama pada data pertama sesuai
+	c. Ketika gagal memuat story dengan data lokasi:
+		- Memastikan StoryRepository.getStoriesWithLocation() terpanggil
+		- Memastikan errorMessage berisi "Error"
+
+9. MainActivityTest.kt
+	a. Ketika memuat story:
+		- Memastikan RecyclerView tampil
+		- Melakukan aksi scroll
+	b. Ketika ke detail story:
+		- Memastikan RecyclerView tampil
+		- Melakukan aksi scroll 
+		- Melakukan aksi klik pada item 
+	c. Ketika ke map story:
+		- Melakukan aksi klik pada menu map
+		- Melakukan aksi back
+	d. Ketika ke create story:
+		- Melakukan aksi klik pada menu add
+		- Melakukan aksi back
+
+		
